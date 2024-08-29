@@ -1,2 +1,2 @@
 # CodeCamp_17
-Learning full stack web develop
+learning full stack web development
