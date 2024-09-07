@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Background lab</title>
     <Style>
+
        div[class^=box]{
         display: inline-block;
         width: 200px;
         height: 200px;
         background-color: blueviolet;
-        background-image: url(http://picsum.photos/id/1000/600);
+        background-image: url(http://picsum.photos/id/1002/600);
         transition: transform 0.5s;
        }
        div[class^=box]:hover{
-        transform: rotate(20deg);
+        transform: rotate(45deg);
+        /* transform: scale(1.2); */
        }
-       .row2 > .box2 {
+       div[class^=box]:active{
+        /* transform: rotate(45deg); */
+        transform: scale(1.2);
+       }
+       /* .row2 > .box2 {
         transform:scale(1.2);
-
-       }
+       } */
 
     </Style>
 </head>
@@ -27,7 +32,7 @@
    
     <!-- <img src="http://picsum.photos/id/1000/200" alt=""> -->
     <div class="row1">
-        <div class="box1"></div>
+        <div class="box1" style="background-position: left top;"></div>
         <div class="box2" style="background-position: center top;"></div>
         <div class="box3" style="background-position: right top;"></div>
     </div>
