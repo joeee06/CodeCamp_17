@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Background lab</title>
     <Style>
-        html{
+       div[class^=box]{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        background-image: url(http://picsum.photos/id/1000/600);
+        transition: transform 0.5s;
+       }
+       div[class^=box]:hover{
+        transform: rotate(20deg);
+       }
+       .row2 > .box2 {
+        transform:scale(1.2);
 
-        }
-        .imgbox{
-            width: 400px;
-            height: 400px;
-            outline: 1px dashed red;
-            text-align: center;
+       }
 
-        }
-        .imgbox >img{
-            width: 380px !important;
-        }
-        .box1{
-            background-image: url(Pic/DALL·E\ 2024-09-06\ 16.15.54\ -\ A\ futuristic\ concept\ of\ artificial\ intelligence\,\ showcasing\ a\ sleek\ humanoid\ robot\ with\ a\ glowing\ neural\ network\ integrated\ into\ its\ body.\ The\ robot\ i.webp);    
-            height: 500px;
-            width: 500px;
-            background-size: cover;
-        }
     </Style>
 </head>
 <body>
-    <div class="imgbox">
-        <img src="Pic/aziz-acharki-U3C79SeHa7k-unsplash 640.jpg" alt="">
+   
+    <!-- <img src="http://picsum.photos/id/1000/200" alt=""> -->
+    <div class="row1">
+        <div class="box1"></div>
+        <div class="box2" style="background-position: center top;"></div>
+        <div class="box3" style="background-position: right top;"></div>
     </div>
-    <div class="box1"></div>
+    <div class="row2">
+        <div class="box1" style="background-position: left center;"></div>
+        <div class="box2" style="background-position: center center;"></div>
+        <div class="box3" style="background-position: right center;"></div>
+    </div>
+    <div class="row3">
+        <div class="box1" style="background-position: left bottom;"></div>
+        <div class="box2" style="background-position: center bottom;"></div>
+        <div class="box3" style="background-position: right bottom"></div>
+    </div>
 </body>
 </html>
