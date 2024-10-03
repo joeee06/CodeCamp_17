@@ -14,21 +14,21 @@
             box-sizing: border-box;
         }
         body {
-            max-width: 1500px;
+            max-width: 1200px;
             margin: auto;
         }
         html {
-            /* font-family:Verdana, Geneva, Tahoma, sans-serif */
-            font-family: "Merriweather", serif;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+            /* font-family: "Merriweather", serif;
             font-optical-sizing: auto;
-            font-weight: 300;
-            font-style: normal;
+            font-weight: 100;
+            font-style: normal; */
         }
         header {
             background-color: #e1f7f1;
             height: 10vh;
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: flex-end;
         }
         .navigation {
@@ -52,35 +52,32 @@
             background-color: #cccccc;
             /* background-image: url("./Pic/aziz-acharki-U3C79SeHa7k-unsplash-1920.jpg"); */
             background-image: url("https://th.bing.com/th/id/R.08ce6b9ca087591422849096bd35d642?rik=G%2b9ycXLXdnUTRw&pid=ImgRaw&r=0");
-            
             height: 80vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
             display: flex;
+            flex-wrap: wrap;
         }
         main > *{
             /* outline: 1px dashed lime; */
             flex: 1;
         }
         .main-l {
+            flex-basis: 100px;
             background-color: rgba(157, 100, 231, 0.536);
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
         }
         .main-r {
+            flex-basis: 100px;
             background-color: rgba(157, 100, 231, 0.529);
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
             
         }
         .main-c {
-            flex-grow: 4;
+            flex: 4 500px;
             text-align: center;
             display: flex;
-            top: 20%;
             flex-flow: column;
-            justify-content: center;
-            color: rgba(32, 51, 218, 0.785);
+            justify-content: flex-start;
+            color: rgb(213, 254, 7);
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
         }
         /* .main-c > * {
@@ -96,6 +93,28 @@
             background-color:rgba(91, 91, 199, 0.8);
             height: 10vh;
         }
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+            }
+            .navigation{
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                text-align: center;
+            }
+            .navigation{
+                flex-flow: column;
+            }
+            .navigation li {
+                border-bottom: 1px solid gray;
+            }
+        }
+
 
     </style>
 </head>
@@ -109,13 +128,22 @@
         </ul>
     </Header>
     <main>
-        <div class="main-l"></div>
+        <div class="main-l">
+            <h2>News</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores et voluptatum ab explicabo perferendis. Doloremque laboriosam aut cum id optio odit et dicta, corrupti placeat culpa, libero quidem. Similique, aliquam?</p>
+        </div>
         <div class="main-c">
             <h1>Title</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis numquam nulla atque explicabo inventore, ut, nostrum eligendi mollitia repellat porro cupiditate rem quas, culpa perferendis odit quaerat voluptates dignissimos totam eum doloribus molestiae temporibus sint ipsam? Repudiandae, libero voluptatibus quod molestiae nisi aliquam veniam dolorem quia nostrum eius fugit quisquam blanditiis laborum quibusdam debitis. Ab, corrupti quia repellendus dicta earum odio iste repellat modi itaque consectetur, fugit molestiae animi placeat. Eius atque ipsa distinctio dolores esse odit, molestiae rerum debitis repellendus sequi aliquam ipsam neque quibusdam cum quisquam cupiditate odio praesentium. Cumque quidem itaque, inventore quos sit odio voluptatum.</p>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ipsa commodi eius accusantium quaerat obcaecati explicabo minus provident voluptatibus fuga, magnam dicta vel facilis qui eos error deserunt nihil dolor.</p> -->
+            <div style="margin: 60px 20px 0 60px;">
+                <h3 style="text-align: left">Title</h3>
+                <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum in obcaecati maxime suscipit, ab natus nemo, pariatur quidem perspiciatis vero veritatis aliquam. Eaque, odio ab possimus aliquid enim nostrum rerum?</p>
+            </div>
         </div>
-        <div class="main-r"></div>
+        <div class="main-r">
+            <h2>Ads</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem incidunt, saepe dicta officiis nihil sapiente obcaecati ad, pariatur nostrum beatae est minima fuga magnam fugiat ipsam eum atque labore.</p>
+        </div>
     </main>
     <footer>Footer</footer>
 </body>
