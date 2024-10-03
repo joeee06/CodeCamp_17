@@ -4,67 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Flex Layoout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
-            max-width: 1200px;
+        body {
+            max-width: 1500px;
             margin: auto;
         }
         html {
-            font-family:Verdana, Geneva, Tahoma, sans-serif
+            /* font-family:Verdana, Geneva, Tahoma, sans-serif */
+            font-family: "Merriweather", serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
         }
         header {
-            background-color: rgba(91, 91, 199, 0.8);
+            background-color: #e1f7f1;
             height: 10vh;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: flex-end;
         }
         .navigation {
             display: flex;
             list-style: none;
             margin: 0; 
-            background: rgba(0, 191, 255, 0.3);
-            }
+            background: #b5f0e0;
+        }
         .navigation a {
             text-decoration: none;
             display: block;
-            padding: 0.5em;
-            color: white;
+            padding: 0.8em;
+            color: rgb(30, 30, 224);
         }
         .navigation a:hover {
-            background: #1565C0;
+            background: #1565c0b4;
+            color: rgb(248, 224, 7);
         }
 
         main {
-            background-color: teal;
-            background-image: url(http://picsum.photos/id/1015/1200);
+            background-color: #cccccc;
+            /* background-image: url("./Pic/aziz-acharki-U3C79SeHa7k-unsplash-1920.jpg"); */
+            background-image: url("https://th.bing.com/th/id/R.08ce6b9ca087591422849096bd35d642?rik=G%2b9ycXLXdnUTRw&pid=ImgRaw&r=0");
+            
             height: 80vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
             display: flex;
         }
         main > *{
             /* outline: 1px dashed lime; */
             flex: 1;
         }
-        .main-l{
+        .main-l {
             background-color: rgba(157, 100, 231, 0.536);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
         }
-        .main-r{
+        .main-r {
             background-color: rgba(157, 100, 231, 0.529);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
+            
         }
-        .main-c{
+        .main-c {
             flex-grow: 4;
             text-align: center;
             display: flex;
+            top: 20%;
             flex-flow: column;
             justify-content: center;
-            color: rgba(218, 165, 32, 0.785);
+            color: rgba(32, 51, 218, 0.785);
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%);
         }
-        footer{
+        /* .main-c > * {
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            display: flex;
+        } */
+        footer {
             background-color:rgba(91, 91, 199, 0.8);
             height: 10vh;
         }
@@ -84,7 +112,8 @@
         <div class="main-l"></div>
         <div class="main-c">
             <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ipsa commodi eius accusantium quaerat obcaecati explicabo minus provident voluptatibus fuga, magnam dicta vel facilis qui eos error deserunt nihil dolor.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis numquam nulla atque explicabo inventore, ut, nostrum eligendi mollitia repellat porro cupiditate rem quas, culpa perferendis odit quaerat voluptates dignissimos totam eum doloribus molestiae temporibus sint ipsam? Repudiandae, libero voluptatibus quod molestiae nisi aliquam veniam dolorem quia nostrum eius fugit quisquam blanditiis laborum quibusdam debitis. Ab, corrupti quia repellendus dicta earum odio iste repellat modi itaque consectetur, fugit molestiae animi placeat. Eius atque ipsa distinctio dolores esse odit, molestiae rerum debitis repellendus sequi aliquam ipsam neque quibusdam cum quisquam cupiditate odio praesentium. Cumque quidem itaque, inventore quos sit odio voluptatum.</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ipsa commodi eius accusantium quaerat obcaecati explicabo minus provident voluptatibus fuga, magnam dicta vel facilis qui eos error deserunt nihil dolor.</p> -->
         </div>
         <div class="main-r"></div>
     </main>
